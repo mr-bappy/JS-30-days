@@ -1,0 +1,103 @@
+body{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(57, 52, 52);
+    height: 100vh;
+}
+
+.container{
+    background-color: rgb(235, 237, 236);
+    width: 30%;
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+.container h1{
+    font-family: sans-serif;
+    color: rgb(17, 57, 57);
+    font-size: 25px;
+    padding: 0px 10px;
+}
+
+.add_list{
+    display: flex;
+    justify-content: center;
+}
+
+.add_list #task{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.add_list input{
+    padding: 0px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    
+}
+
+.add_list button{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: orange;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.tasks{
+    /* margin: 20px 15px; */
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+
+}
+ul li::before{
+    content: '';
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    
+}
+
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+ul li span:hover{
+    background-color: rgba(110, 115, 120, 0.616);
+}
